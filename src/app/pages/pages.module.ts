@@ -9,22 +9,36 @@ import { PagesComponent } from './pages.component';
 
 import { PAGES_ROUTES } from './pages.routes';
 
+import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
+
+import { FormsModule } from '@angular/forms';
+
+import { ChartsModule } from 'ng2-charts';
+
+
 @NgModule({
   declarations: [
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
-    PagesComponent
+    PagesComponent,
+    IncrementadorComponent,
+    GraficoDonaComponent
   ],
   exports: [
     DashboardComponent,
     ProgressComponent,
     Graficas1Component,
-    PagesComponent
+    PagesComponent,
+    IncrementadorComponent,
+    GraficoDonaComponent
   ],
   imports: [
     SharedModule,
-    PAGES_ROUTES
+    PAGES_ROUTES,
+    FormsModule,
+    ChartsModule
   ],
   providers: [],
   bootstrap: []
